@@ -301,7 +301,7 @@ define([
 
             /******************************************** Issue 3000*/
             function workflow_save_as() {
-                var body = $('<form><label style="display:inline-block; width: 100%;">Save as name: </label><input type="text" id="workflow_rename" style="width: 80%;" autofocus/>' + 
+                var body = $('<form><label style="display:inline-block; width: 100%;">Save as name: </label><input type="text" id="workflow_rename" style="width: 80%;" autofocus/>' +
                 '<br><label style="display:inline-block; width: 100%;">Annotation: </label><input type="text" id="wf_annotation" style="width: 80%;" /></form>');
                     window.show_modal("Save As a New Workflow", body, {
                         "OK": function () {
@@ -317,7 +317,7 @@ define([
                                 }
                             }).done(function(id){
                                 window.onbeforeunload = undefined;
-                                window.location = "/workflow/editor?id=" + id;
+                                window.location = "./editor?id=" + id;
                                 hide_modal();
                             }).fail(function(){
                                 hide_modal();
